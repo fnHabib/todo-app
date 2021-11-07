@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Todo List Style</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+  </head>
+  <body class="bgcolor">
+    <div class="container mt-2 mb-5">
+      <div class="row">
+        <div class="col-md-12 text-center text-primary mt-5">
+          <h1>Todo List Making For LocalStorage</h1>
+
+          <h3 id="warning" class="text-danger"></h3>
+
+          <audio src="./audio.mp3"></audio>
+          <audio src="./delet.mp3" id="delete"></audio>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>serial</th>
+                <th>New itme</th>
+                <th>Description</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 d-flex justify-content-around">
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control shadow"
+              name="titel"
+              id="titelInput"
+              placeholder="enter your titel"
+            />
+          </div>
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control shadow"
+              name="titel"
+              id="desInput"
+              placeholder="enter your description"
+            />
+          </div>
+          <div
+            class="col-md-2 d-flex justify-content-around align-items-center"
+          >
+            <!-- <button class="btn btn-primary p-2">Edit</button> -->
+            <button id="addBtn" class="btn btn-primary p-2 shadow">ADD Item</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div id="modifyDiv" class="col-md-3 mx-auto shadow mt-5 visually-hidden">
+          <div class="mb-3 mt-5">
+            <input type="hidden" id="arrayindex" value="">
+            <input class="form-control" type="text" value="" id="modify" />
+          </div>
+
+          <div>
+            <textarea
+              class="form-control"
+              name="textarea"
+              value=""
+              id="textarea"
+              cols="30"
+              rows="5"
+            ></textarea>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-around mt-3 mb-5"
+          >
+            <button id='cancel' class="btn btn-warning">Cancel</button>
+            <button id="update" class="btn btn-success">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
